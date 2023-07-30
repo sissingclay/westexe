@@ -1,5 +1,5 @@
 {
-  "name": "angular.io-example",
+  "name": "westexe",
   "version": "0.0.0",
   "description": "Example project from an angular.io guide.",
   "license": "MIT",
@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "npm run serve:ssr",
     "start:dev": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
@@ -53,5 +53,8 @@
     "protractor": "~7.0.0",
     "ts-node": "~10.9.0",
     "typescript": "~4.9.3"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
