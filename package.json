@@ -1,9 +1,13 @@
 {
-  "name": "@org/source",
+  "name": "@westexe/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "npx nx run-many --target=build --all=true && cd apps/admin && NODE_ENV=production npx strapi build && npx move-cli dist ../../dist/admin"
+    "strapi:install": "npm --prefix apps/admin i",
+    "strapi:develop": "npm --prefix apps/admin run develop",
+    "strapi:start": "npm --prefix apps/admin run start",
+    "strapi:build": "npm --prefix apps/admin run build",
+    "build": "npx nx run-many --target=build --all=true && npm run strapi:build && npm --prefix apps/admin run strapi:move-cli"
   },
   "private": true,
   "dependencies": {
@@ -54,7 +58,6 @@
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "jest-preset-angular": "~13.1.0",
-    "move-cli": "^2.0.0",
     "ng-packagr": "~16.1.0",
     "nx": "16.5.5",
     "nx-cloud": "latest",

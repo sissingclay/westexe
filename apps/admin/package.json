@@ -6,10 +6,14 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build:develop": "strapi build",
+    "build": "NODE_ENV=production strapi build",
+    "strapi:move-cli": "move-cli dist ../../dist/admin",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "move-cli": "^2.0.0"
+  },
   "dependencies": {
     "@strapi/strapi": "^4.11.2",
     "@strapi/plugin-users-permissions": "^4.11.2",
