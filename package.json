@@ -53,8 +53,5 @@
     "protractor": "~7.0.0",
     "ts-node": "~10.9.0",
     "typescript": "~4.9.3"
-  },
-  "engines": {
-    "node": "18.x"
   }
 }
