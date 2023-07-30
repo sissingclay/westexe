@@ -11,10 +11,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run angular.io-example:serve-ssr",
-    "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build && ng run angular.io-example:server",
-    "prerender": "ng run angular.io-example:prerender"
+    "dev:ssr": "ng run westexe:serve-ssr",
+    "serve:ssr": "pm2 start dist/server/main.js --no-daemon",
+    "build:ssr": "ng build && ng run westexe:server",
+    "prerender": "ng run westexe:prerender"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +30,7 @@
     "@nguniversal/express-engine": "^16.1.0",
     "angular-in-memory-web-api": "~0.16.0",
     "express": "^4.18.1",
+    "pm2": "^5.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
